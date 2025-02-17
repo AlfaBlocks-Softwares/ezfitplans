@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { spacing } from "./theme";
 
 export default {
   content: [
@@ -8,9 +9,23 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: { ...spacing },
+      backgroundColor: {
+        primary: "var(--bg-primary)",
+        secondary: "var(--bg-secondary)",
+        muted: "var(--bg-muted)",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        muted: "var(--muted)",
+        destructive: "var(--destructive)",
+      },
+      borderColor: {
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        muted: "var(--muted)",
+        destructive: "var(--destructive)",
       },
     },
   },
