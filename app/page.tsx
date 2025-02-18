@@ -3,6 +3,8 @@ import Button from "@/components/ui/Button";
 import FormGroup from "@/components/ui/FormGroup";
 import { FormLabel } from "@/components/ui/FormLabel";
 import Input from "@/components/ui/Input";
+import ThemeToggle from "@/components/ui/ThemeToggle";
+
 // import { Table } from "antd";
 
 // const data = [
@@ -94,9 +96,14 @@ import Input from "@/components/ui/Input";
 export default function Home() {
   return (
     <>
+      <ThemeToggle></ThemeToggle>
       <Input type="text" name="name" className="w-40" />
       <Button>default</Button>
-      <Button variant={"primary"} size={"md"}>
+      <Button variant={"primary"} size={"md"} loading={true}>
+        medium + primary
+      </Button>
+
+      <Button variant={"primary"} size={"md"} loading={true}>
         medium + primary
       </Button>
       <Button variant={"secondary"} size={"lg"}>
