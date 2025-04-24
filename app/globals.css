@@ -1,29 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
 
 :root {
-  --bg-primary: darkblue;
-  --bg-secondary: white;
-  --bg-muted: gray;
+  --primary-bg: #ffffff;
+  --secondary-bg: #008080;
+  --dashboard-bg: #f5f5f8;
+  --onboarding-bg: #211e08f2;
 
-  --black: black;
-  --primary: darkblue;
-  --secondary: white;
-  --muted: gray;
-  --caption: gray;
-  --destructive: red;
+  --primary: #ffffff;
+  --secondary: #008080;
+  --muted: #b8b8b8;
+  --smoky: #101720;
+
+  --font-inter: "Inter", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-noto-serif: "Noto Serif", serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-.dark {
-  --bg-primary: white;
-  --bg-secondary: white;
-  --bg-muted: gray;
+@theme inline {
+  --color-primary-bg: var(--primary-bg);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-dashboard-bg: var(--dashboard-bg);
+  --color-onboarding-bg: var(--onboarding-bg);
 
-  --black: black;
-  --primary: white;
-  --secondary: darkblue;
-  --muted: gray;
-  --caption: gray;
-  --destructive: red;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-smoky: var(--smoky);
+
+  /* Font Families */
+  --font-inter: var(--font-inter);
+  --font-noto-serif: var(--font-noto-serif);
+  --font-playfair: var(--font-playfair);
+  --font-jakarta: var(--font-jakarta);
+  --font-poppins: var(--font-poppins);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
 }
