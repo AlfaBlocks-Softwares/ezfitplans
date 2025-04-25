@@ -1,10 +1,18 @@
 import Footer from "@/components/footer";
+import Brands from "@/components/landingpage/brands";
+import WhyChooseUs from "@/components/landingpage/choose";
 import Contact from "@/components/landingpage/contact";
+import Hero from "@/components/landingpage/hero";
+import NavBar from "@/components/landingpage/navbar";
 import SuccessStores from "@/components/landingpage/successstories";
 
 export default function Home() {
   return (
-    <main className="p-[40px] bg-primary-bg">
+    <main className="px-[40px] bg-landing-bg overflow-x-hidden">
+      <NavBar />
+      {/* <Hero /> */}
+      <Brands />
+      <WhyChooseUs />
       <SuccessStores />
       <Contact />
       <Footer />

@@ -1,7 +1,8 @@
 import { apple, arrowuprightwhite, facebook, google } from "@/assets";
-import { Button, OnboardingCard } from "@/design-system";
+import { Button } from "@/design-system";
 import { Input } from "@/design-system";
 import Image from "next/image";
+import { OnboardingCard } from "../cards";
 
 const ClientSignupVerification = () => {
   return (

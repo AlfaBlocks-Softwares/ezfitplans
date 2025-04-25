@@ -1,8 +1,9 @@
 import { apple, arrowupright, facebook, google } from "@/assets";
-import { Button, Checkbox, OnboardingCard } from "@/design-system";
+import { Button, Checkbox } from "@/design-system";
 import { Input } from "@/design-system";
 import Image from "next/image";
 import Link from "next/link";
+import { OnboardingCard } from "../cards";
 
 const LoginPage = () => {
   return (

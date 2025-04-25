@@ -8,17 +8,20 @@
   --secondary-bg: #008080;
   --dashboard-bg: #f5f5f8;
   --onboarding-bg: #211e08f2;
+  --landing-bg: #f5f5f8;
 
   --primary: #ffffff;
   --secondary: #008080;
   --muted: #b8b8b8;
   --smoky: #101720;
+  --black: #222222;
 
   --font-inter: "Inter", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-noto-serif: "Noto Serif", serif;
   --font-playfair: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
+
   scroll-behavior: smooth;
 }
 
@@ -27,11 +30,13 @@
   --color-secondary-bg: var(--secondary-bg);
   --color-dashboard-bg: var(--dashboard-bg);
   --color-onboarding-bg: var(--onboarding-bg);
+  --color-landing-bg: var(--landing-bg);
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-smoky: var(--smoky);
+  --color-black: var(--black);
 
   /* Font Families */
   --font-inter: var(--font-inter);
@@ -39,6 +44,8 @@
   --font-playfair: var(--font-playfair);
   --font-jakarta: var(--font-jakarta);
   --font-poppins: var(--font-poppins);
+
+  --shadow-drop: 4px 4px 8px 0px #00000040;
 }
 
 @media (prefers-color-scheme: dark) {
