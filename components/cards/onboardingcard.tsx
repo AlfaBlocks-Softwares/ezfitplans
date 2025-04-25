@@ -7,7 +7,7 @@ export const OnboardingCard: React.FC<Props> = ({ children }) => {
     <main
       className="p-[44px] w-screen h-screen"
       style={{
-        background: "url('login-bg.svg')",
+        background: "url('/loginbg.svg')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
