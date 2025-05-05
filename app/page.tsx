@@ -8,9 +8,9 @@ import SuccessStores from "@/components/landingpage/successstories";
 
 export default function Home() {
   return (
-    <main className="px-[40px] bg-landing-bg overflow-x-hidden">
+    <main className="px-[40px] bg-landing-bg overflow-hidden relative">
       <NavBar />
-      {/* <Hero /> */}
+      <Hero />
       <Brands />
       <WhyChooseUs />
       <SuccessStores />

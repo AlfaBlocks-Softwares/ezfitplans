@@ -37,6 +37,7 @@
   --color-muted: var(--muted);
   --color-smoky: var(--smoky);
   --color-black: var(--black);
+  --color-destructive: var(--color-red-600);
 
   /* Font Families */
   --font-inter: var(--font-inter);
@@ -51,4 +52,32 @@
 @media (prefers-color-scheme: dark) {
   :root {
   }
+}
+
+.ant-otp-input {
+  background: transparent !important;
+  color: var(--muted) !important;
+  width: 65px !important;
+  height: 45px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  outline: none !important;
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+}
+
+.ant-otp-input-outlined {
+  outline: none !important;
+  border: none !important;
+}
+
+.ant-otp-input:focus,
+.ant-otp-input:hover {
+  outline: none !important;
+  border: none !important;
+}
+
+.ant-otp-input::placeholder {
+  color: var(--muted) !important;
 }

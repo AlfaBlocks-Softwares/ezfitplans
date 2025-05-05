@@ -56,7 +56,7 @@ export default function Footer() {
   return (
     <div
       ref={footerRef}
-      className="w-full flex flex-col justify-center items-center"
+      className="py-[12px] w-full flex flex-col justify-center items-center"
     >
       <main className="w-full mb-spacing-4xl grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
         <motion.div

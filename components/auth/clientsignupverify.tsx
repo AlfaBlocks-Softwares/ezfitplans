@@ -1,13 +1,16 @@
+"use client";
 import { apple, arrowuprightwhite, facebook, google } from "@/assets";
 import { Button } from "@/design-system";
 import { Input } from "@/design-system";
 import Image from "next/image";
 import { OnboardingCard } from "../cards";
-
+import Link from "next/link";
+import { ROUTES } from "@/Routes/routes";
+import { Input as AntdInput, Form } from "antd";
 const ClientSignupVerification = () => {
   return (
     <OnboardingCard>
-      <form className="w-full h-full flex flex-col justify-center items-center gap-[68px]">
+      <form className="w-full h-full flex flex-col justify-center items-center [@media(max-height:800px)]:gap-8 gap-16">
         <div className="flex flex-col justify-center items-center gap-[8px]">
           <p className="font-noto-serif font-bold text-4xl text-primary text-center">
             Your Wellness, Your Way
@@ -18,12 +21,16 @@ const ClientSignupVerification = () => {
         </div>
 
         <div className="w-[350px] p-[12px] flex justify-center items-center gap-[30px] rounded-[12px] bg-secondary-bg">
-          <p className="w-[150px] text-[14px] font-bold font-poppins text-secondary bg-primary-bg h-[45px] rounded-[12px] text-center flex justify-center items-center cursor-pointer">
-            Client Signup
-          </p>
-          <p className="w-[150px] text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer">
-            Professional Signup
-          </p>
+          <Link href={ROUTES.clientsignup} className="w-[150px] ">
+            <p className="text-[14px] font-bold font-poppins text-secondary bg-primary-bg h-[45px] rounded-[12px] text-center flex justify-center items-center cursor-pointer">
+              Client Signup
+            </p>
+          </Link>
+          <Link href={ROUTES.professionalsignup} className="w-[150px]">
+            <p className="text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer">
+              Professional Signup
+            </p>
+          </Link>
         </div>
 
         <div className="w-[450px] flex flex-col justify-start items-start gap-[8px]">
@@ -31,24 +38,12 @@ const ClientSignupVerification = () => {
             <p className="font-poppins font-[400]  text-primary text-[14px]">
               Enter OTP
             </p>
-            <div className="w-full flex justify-center items-center gap-[8px]">
-              <Input
-                placeholder="1"
-                className="placeholder:text-muted text-muted !w-[64px] !h-[45px] !flex !justify-center !items-center text-center"
-              />
-              <Input
-                placeholder="2"
-                className="placeholder:text-muted text-muted !w-[64px] !h-[45px] flex justify-center items-center text-center"
-              />
-              <Input
-                placeholder="3"
-                className="placeholder:text-muted text-muted !w-[64px] !h-[45px] flex justify-center items-center text-center"
-              />
-              <Input
-                placeholder="4"
-                className="placeholder:text-muted text-muted !w-[64px] !h-[45px] flex justify-center items-center text-center"
-              />
-            </div>
+            <Form.Item
+              rules={[{ required: true, message: "Please enter the OTP" }]}
+              className="w-full flex justify-center items-center"
+            >
+              <AntdInput.OTP length={4} aria-placeholder="1" />
+            </Form.Item>
           </div>
           <div className="w-full flex justify-between items-center">
             <p className="font-poppins font-[400] text-[14px] text-secondary">

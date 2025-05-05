@@ -5,7 +5,7 @@ interface Props {
 export const OnboardingCard: React.FC<Props> = ({ children }) => {
   return (
     <main
-      className="p-[44px] w-screen h-screen"
+      className="py-[20px] px-[44px] w-screen h-screen"
       style={{
         background: "url('/loginbg.svg')",
         backgroundRepeat: "no-repeat",
@@ -13,7 +13,7 @@ export const OnboardingCard: React.FC<Props> = ({ children }) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-onboarding-bg rounded-[32px] w-[700px] h-full flex flex-col justify-between items-center">
+      <div className="bg-onboarding-bg rounded-[32px] w-[700px] h-full flex flex-col justify-center items-center">
         {children}
       </div>
     </main>

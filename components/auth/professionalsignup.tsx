@@ -1,13 +1,38 @@
+"use client";
 import { apple, arrowuprightwhite, facebook, google } from "@/assets";
 import { Button } from "@/design-system";
 import { Input } from "@/design-system";
 import Image from "next/image";
 import { OnboardingCard } from "../cards";
+import Link from "next/link";
+import { ROUTES } from "@/Routes/routes";
+import {
+  ProfessionalSignupFormSchema,
+  professionalSignupSchema,
+} from "@/validations";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import ErrorLabel from "@/design-system/errorlabel";
 
 const ProfessionalSignup = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ProfessionalSignupFormSchema>({
+    resolver: zodResolver(professionalSignupSchema),
+  });
+
+  const onSubmit = (data: ProfessionalSignupFormSchema) => {
+    console.log("Data", data);
+  };
+
   return (
     <OnboardingCard>
-      <form className="w-full h-full flex flex-col justify-between items-center py-[80px]">
+      <form
+        className="w-full h-full flex flex-col justify-center items-center gap-12 [@media(max-height:800px)]:gap-6"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="flex flex-col justify-center items-center gap-[8px]">
           <p className="font-noto-serif font-bold text-4xl text-primary text-center">
             Your Wellness, Your Way
@@ -18,16 +43,20 @@ const ProfessionalSignup = () => {
         </div>
 
         <div className="w-[350px] p-[12px] flex justify-center items-center gap-[30px] rounded-[12px] bg-secondary-bg">
-          <p className="w-[150px] text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer text-center">
-            Client Signup
-          </p>
-          <p
-            className="w-[150px] text-[14px] font-bold font-poppins text-secondary
+          <Link href={ROUTES.clientsignup} className="w-[150px]">
+            <p className="text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer text-center">
+              Client Signup
+            </p>
+          </Link>
+          <Link href={ROUTES.professionalsignup} className="w-[200px]">
+            <p
+              className="text-[14px] font-bold font-poppins text-secondary
         bg-primary-bg h-[45px] rounded-[12px] text-center flex justify-center
         items-center cursor-pointer"
-          >
-            Professional Signup
-          </p>
+            >
+              Professional Signup
+            </p>
+          </Link>
         </div>
 
         <div className="flex flex-col gap-[24px] w-[450px]">
@@ -36,20 +65,44 @@ const ProfessionalSignup = () => {
               Certificates
             </p>
             <Input
+              {...register("certification")}
+              name="certification"
               placeholder="Add Certification"
               className="placeholder:text-muted text-muted"
+              error={errors?.certification?.message}
             />
+            {errors?.certification?.message && (
+              <ErrorLabel message={errors?.certification?.message} />
+            )}
           </div>
 
-          <div className="w-full flex justify-between items-start gap-[50px]">
-            <Input
-              placeholder="Specialization"
-              className="placeholder:text-muted text-muted"
-            />
-            <Input
-              placeholder="Pricing Model"
-              className="placeholder:text-muted text-muted"
-            />
+          <div className="w-full flex justify-between items-start gap-12">
+            <div>
+              <Input
+                {...register("specialization")}
+                name="specialization"
+                placeholder="Specialization"
+                className="placeholder:text-muted text-muted"
+                error={errors?.specialization?.message}
+              />
+              {errors?.specialization?.message && (
+                <ErrorLabel message={errors?.specialization?.message} />
+              )}
+            </div>
+            <div>
+              <Input
+                {...register("pricing", { valueAsNumber: true })}
+                name="pricing"
+                type="number"
+                min="0"
+                placeholder="Pricing Model"
+                className="placeholder:text-muted text-muted"
+                error={errors?.pricing?.message}
+              />
+              {errors?.pricing?.message && (
+                <ErrorLabel message={errors?.pricing?.message} />
+              )}
+            </div>
           </div>
 
           <div className="flex flex-col justify-start items-start gap-[8px]">
@@ -57,9 +110,15 @@ const ProfessionalSignup = () => {
               Bio
             </p>
             <Input
+              {...register("bio")}
+              name="bio"
               placeholder="Enter your bio"
               className="placeholder:text-muted text-muted"
+              error={errors?.bio?.message}
             />
+            {errors?.bio?.message && (
+              <ErrorLabel message={errors?.bio?.message} />
+            )}
           </div>
         </div>
 

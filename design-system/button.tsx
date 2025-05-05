@@ -13,6 +13,8 @@ const buttonVariants = cva(
           "bg-secondary-bg text-primary font-bold rounded-[12px] text-[14px]",
         secondary:
           "bg-primary-bg text-secondary font-bold rounded-[12px] text-[16px]",
+        outline:
+          "bg-primary border-1 border-secondary-bg rounded-[12px] text-secondary-bg text-[14px]",
       },
       size: {
         default: "px-[26px] py-[14px]",
@@ -36,8 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, children, disabled, ...props }, ref) => {
     return (
       <motion.div
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 80, damping: 10 }}
       >
         <button

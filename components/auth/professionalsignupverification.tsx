@@ -1,13 +1,38 @@
+"use client";
 import { apple, arrowuprightwhite, facebook, google } from "@/assets";
 import { Button } from "@/design-system";
 import { Input } from "@/design-system";
 import Image from "next/image";
 import { OnboardingCard } from "../cards";
+import { ROUTES } from "@/Routes/routes";
+import Link from "next/link";
+import {
+  professionalSignupVerificationSchema,
+  ProfessionalSignupVerifyFormSchema,
+} from "@/validations";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import ErrorLabel from "@/design-system/errorlabel";
 
 const ProfessionalSignupVerification = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ProfessionalSignupVerifyFormSchema>({
+    resolver: zodResolver(professionalSignupVerificationSchema),
+  });
+
+  const onSubmit = (data: ProfessionalSignupVerifyFormSchema) => {
+    console.log("Data", data);
+  };
+
   return (
     <OnboardingCard>
-      <form className="w-full h-full flex flex-col justify-between items-center py-[80px]">
+      <form
+        className="w-full h-full flex flex-col justify-between items-center py-[80px]"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="flex flex-col justify-center items-center gap-[8px]">
           <p className="font-noto-serif font-bold text-4xl text-primary text-center">
             Your Wellness, Your Way
@@ -18,16 +43,20 @@ const ProfessionalSignupVerification = () => {
         </div>
 
         <div className="w-[350px] p-[12px] flex justify-center items-center gap-[30px] rounded-[12px] bg-secondary-bg">
-          <p className="w-[150px] text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer text-center">
-            Client Signup
-          </p>
-          <p
-            className="w-[150px] text-[14px] font-bold font-poppins text-secondary
+          <Link href={ROUTES.clientsignup} className="w-[150px]">
+            <p className="text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer text-center">
+              Client Signup
+            </p>
+          </Link>
+          <Link href={ROUTES.professionalsignup} className="w-[200px]">
+            <p
+              className="text-[14px] font-bold font-poppins text-secondary
         bg-primary-bg h-[45px] rounded-[12px] text-center flex justify-center
         items-center cursor-pointer"
-          >
-            Professional Signup
-          </p>
+            >
+              Professional Signup
+            </p>
+          </Link>
         </div>
 
         <div className="w-[450px] flex flex-col justify-start items-start gap-[8px]">
@@ -35,9 +64,15 @@ const ProfessionalSignupVerification = () => {
             Verification
           </p>
           <Input
+            {...register("code", { valueAsNumber: true })}
+            name="code"
             placeholder="Verification Code"
             className="placeholder:text-muted text-muted"
+            error={errors?.code?.message}
           />
+          {errors?.code?.message && (
+            <ErrorLabel message={errors?.code?.message} />
+          )}
         </div>
         <Button type="submit">
           <div className="w-full flex justify-center items-center gap-[8px]">

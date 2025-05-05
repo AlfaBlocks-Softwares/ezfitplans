@@ -1,14 +1,35 @@
+"use client";
 import { apple, arrowupright, facebook, google } from "@/assets";
 import { Button, Checkbox } from "@/design-system";
 import { Input } from "@/design-system";
 import Image from "next/image";
 import Link from "next/link";
 import { OnboardingCard } from "../cards";
+import { LoginFormSchema, loginSchema } from "@/validations";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import ErrorLabel from "@/design-system/errorlabel";
+import { ROUTES } from "@/Routes/routes";
 
 const LoginPage = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormSchema>({
+    resolver: zodResolver(loginSchema),
+  });
+
+  const onSubmit = (data: LoginFormSchema) => {
+    console.log("Login Data", data);
+  };
+
   return (
     <OnboardingCard>
-      <form className="w-full h-full flex flex-col justify-between items-center py-[80px]">
+      <form
+        className="w-full h-full flex flex-col justify-center items-center gap-[2%]"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="flex flex-col justify-center items-center gap-[8px]">
           <p className="font-noto-serif font-bold text-4xl text-primary text-center">
             Every Meal, Every Workout, Every Choice - It All Counts!
@@ -24,9 +45,15 @@ const LoginPage = () => {
               Email
             </p>
             <Input
+              {...register("email")}
+              name="email"
               placeholder="Email"
               className="placeholder:text-muted text-muted"
+              error={errors?.email?.message}
             />
+            {errors?.email?.message && (
+              <ErrorLabel message={errors?.email?.message} />
+            )}
           </div>
 
           <div className="flex flex-col justify-start items-start gap-[8px]">
@@ -34,9 +61,16 @@ const LoginPage = () => {
               Password
             </p>
             <Input
+              {...register("password")}
+              type="password"
+              name="password"
               placeholder="Password"
               className="placeholder:text-muted text-muted"
+              error={errors?.password?.message}
             />
+            {errors?.password?.message && (
+              <ErrorLabel message={errors?.password?.message} />
+            )}
           </div>
 
           <div className="w-full flex justify-between items-start gap-[8px]">
@@ -61,7 +95,7 @@ const LoginPage = () => {
               />
             </div>
           </Button>
-          <Link href={"/clientsignup"}>
+          <Link href={ROUTES.clientsignup}>
             <Button
               type="submit"
               className="self-start text-center w-[150px] font-bold text-[16px]"
