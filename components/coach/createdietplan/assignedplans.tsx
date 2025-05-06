@@ -14,15 +14,15 @@ const CustomizedCalendar = () => {
   ]);
 
   // Custom event renderer
-  const renderEventContent = (eventInfo) => {
-    return (
-      <div className="text-xs">
-        <div style={{ color: eventInfo.event.textColor || "#000" }}>
-          {eventInfo.event.title}
-        </div>
-      </div>
-    );
-  };
+  // const renderEventContent = (eventInfo) => {
+  //   return (
+  //     <div className="text-xs">
+  //       <div style={{ color: eventInfo.event.textColor || "#000" }}>
+  //         {eventInfo.event.title}
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   return (
     <div className="max-w-4xl mx-auto p-4">
@@ -33,7 +33,7 @@ const CustomizedCalendar = () => {
           initialView="dayGridMonth"
           headerToolbar={false}
           events={events}
-          eventContent={renderEventContent}
+          // eventContent={renderEventContent}
           customButtons={{
             prev: {
               text: "<",

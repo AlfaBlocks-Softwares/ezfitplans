@@ -35,7 +35,7 @@ const LoginPage = () => {
             Every Meal, Every Workout, Every Choice - It All Counts!
           </p>
           <p className="font-poppins font-[400] text-muted text-center">
-            Good to see you again. Let;s get begin
+            Good to see you again. Let's get begin
           </p>
         </div>
 
