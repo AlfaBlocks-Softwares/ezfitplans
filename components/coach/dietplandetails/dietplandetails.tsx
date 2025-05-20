@@ -31,7 +31,7 @@ const DietPlanDetails = () => {
     <main className="w-full my-[12px]">
       <section className="bg-primary rounded-xl border-1 border-muted p-[12px]  flex flex-col  justify-start items-start gap-[8px]">
         <p className="text-black">Diet Plan</p>
-        <div className="w-full flex justify-start items-start gap-[8px] flex-wrap">
+        <div className="w-full flex justify-center items-center gap-[8px] flex-wrap">
           {dietPlanData?.map((itm, index) => (
             <DietPlanCard details={itm} key={index} />
           ))}

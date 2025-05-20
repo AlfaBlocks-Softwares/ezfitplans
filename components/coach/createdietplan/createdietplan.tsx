@@ -3,6 +3,7 @@ import Initials from "./initials";
 import DailyTarget from "./dailytarget";
 import CustomizedCalendar from "./assignedplans";
 import ProgressTracking from "./progress";
+import WorkoutDietCalendar from "./calender";
 
 const CreateDietPlanForm = () => {
   return (
@@ -10,6 +11,7 @@ const CreateDietPlanForm = () => {
       <Initials />
       <DailyTarget />
       {/* <CustomizedCalendar /> */}
+      <WorkoutDietCalendar />
       <ProgressTracking />
     </form>
   );

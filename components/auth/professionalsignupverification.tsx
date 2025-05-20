@@ -12,7 +12,7 @@ import {
 } from "@/validations";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import ErrorLabel from "@/design-system/errorlabel";
+import { ErrorLabel } from "@/design-system";
 
 const ProfessionalSignupVerification = () => {
   const {
@@ -30,7 +30,7 @@ const ProfessionalSignupVerification = () => {
   return (
     <OnboardingCard>
       <form
-        className="w-full h-full flex flex-col justify-between items-center py-[80px]"
+        className="w-full h-full flex flex-col justify-center items-center gap-12 pt-4"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col justify-center items-center gap-[8px]">
@@ -84,7 +84,7 @@ const ProfessionalSignupVerification = () => {
             />
           </div>
         </Button>
-        <div className="w-full flex flex-col justify-center items-center gap-[48px]">
+        <div className="w-full flex flex-col justify-center items-center gap-[48px] pb-2">
           <div className="w-[400px] flex justify-center items-center">
             <p className="w-full border-1 border-muted"></p>
             <p className="w-full text-[14px] font-[400] font-poppins text-center text-primary">

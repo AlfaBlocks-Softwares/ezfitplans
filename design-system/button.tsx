@@ -15,6 +15,7 @@ const buttonVariants = cva(
           "bg-primary-bg text-secondary font-bold rounded-[12px] text-[16px]",
         outline:
           "bg-primary border-1 border-secondary-bg rounded-[12px] text-secondary-bg text-[14px]",
+        text: "!p-0 !px-0 !py-0",
       },
       size: {
         default: "px-[26px] py-[14px]",

@@ -59,25 +59,65 @@
   color: var(--muted) !important;
   width: 65px !important;
   height: 45px !important;
-  display: flex !important;
+  /* display: flex !important;
   justify-content: center !important;
-  align-items: center !important;
+  align-items: center !important; */
   outline: none !important;
   border-radius: 12px;
   border: 2px solid var(--primary);
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .ant-otp-input-outlined {
   outline: none !important;
-  border: none !important;
 }
 
 .ant-otp-input:focus,
 .ant-otp-input:hover {
   outline: none !important;
-  border: none !important;
 }
 
 .ant-otp-input::placeholder {
   color: var(--muted) !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+  font-weight: normal;
+  padding: 12px 16px;
+  border: 0px solid transparent !important;
+  border-radius: 0px !important;
+}
+
+.ant-table-cell::before {
+  width: 0px !important;
+}
+
+.ant-table-cell {
+  border: 0px solid transparent !important;
+  border-right: 1px solid var(--color-muted) !important;
+  text-align: center !important;
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.ant-table-cell:last-child {
+  border: 0px solid transparent !important;
+}
+
+.ant-picker-input > input {
+  height: 48px !important;
+}
+
+.ant-picker-input > input::placeholder {
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  opacity: 1 !important;
+  color: var(--color-black) !important;
 }

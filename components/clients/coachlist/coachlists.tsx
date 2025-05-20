@@ -1,0 +1,106 @@
+"use client";
+import { search } from "@/assets";
+import { Input } from "@/design-system";
+import Image from "next/image";
+import CoachDetailsCard from "./coachdetailcard/coachdetailcard";
+import { useState } from "react";
+const coachList = [
+  {
+    id: 1,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.5,
+    pricePerSession: 50,
+  },
+  {
+    id: 2,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.8,
+    pricePerSession: 45,
+  },
+  {
+    id: 3,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.2,
+    pricePerSession: 55,
+  },
+  {
+    id: 4,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.6,
+    pricePerSession: 60,
+  },
+  {
+    id: 5,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.5,
+    pricePerSession: 50,
+  },
+  {
+    id: 6,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.8,
+    pricePerSession: 45,
+  },
+  {
+    id: 7,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.2,
+    pricePerSession: 55,
+  },
+  {
+    id: 8,
+    title: "John Doe",
+    subtitle: "Specialist in Strength Nutrition",
+    specialties: ["Strength", "Nutrition"],
+    rating: 4.6,
+    pricePerSession: 60,
+  },
+];
+
+const CoachLists = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  return (
+    <main className="w-full h-full flex flex-col gap-2 my-2">
+      <div className="w-full rounded-[12px] p-3 bg-primary flex justify-center items-center">
+        <div className="w-full relative  max-w-[900px]">
+          <Image
+            src={search}
+            alt="search"
+            className="w-[18px] h-[18px] absolute left-4 top-3"
+          />
+          <Input
+            className="pl-10 border-1 border-muted w-full"
+            placeholder="Search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 bg-primary rounded-[12px] p-3 h-full">
+        {coachList
+          .filter((coach) =>
+            coach.title.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+          .map((coach) => (
+            <CoachDetailsCard key={coach.id} {...coach} />
+          ))}
+      </div>
+    </main>
+  );
+};
+
+export default CoachLists;

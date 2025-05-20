@@ -13,7 +13,7 @@ export const OnboardingCard: React.FC<Props> = ({ children }) => {
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-onboarding-bg rounded-[32px] w-[700px] h-full flex flex-col justify-center items-center">
+      <div className="bg-onboarding-bg rounded-[32px] w-[700px] h-[95dvh] overflow-y-scroll hide-scrollbar">
         {children}
       </div>
     </main>

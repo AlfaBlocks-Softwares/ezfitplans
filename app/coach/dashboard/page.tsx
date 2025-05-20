@@ -1,7 +1,7 @@
-import React from "react";
+import CoachDashboardLandingPage from "@/components/coach/dashboard";
 
 const CoachDashboard = () => {
-  return <div>CoachDashboard</div>;
+  return <CoachDashboardLandingPage />;
 };
 
 export default CoachDashboard;

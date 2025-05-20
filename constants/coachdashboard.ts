@@ -1,4 +1,9 @@
-import { IDashboardNavItems } from "@/types";
+import {
+  IClientForCoach,
+  IDashboardData,
+  IDashboardNavItems,
+  IUser,
+} from "@/types";
 
 export const CoachDashboardNavItems: IDashboardNavItems[] = [
   {
@@ -12,5 +17,418 @@ export const CoachDashboardNavItems: IDashboardNavItems[] = [
   {
     title: "Client Menu",
     path: "/coach/client",
+  },
+];
+
+export const CoachDashboardData: IDashboardData = {
+  expiringPlans: [
+    {
+      name: "Keto Diet Plan",
+      expiresOn: "2023-10-15",
+    },
+    {
+      name: "Workout Plan",
+      expiresOn: "2023-10-15",
+    },
+  ],
+  financialOverview: {
+    earnings: 5000,
+    pendingPayments: 1500,
+  },
+  notifications: {
+    unreadMessages: 3,
+  },
+};
+
+export const usersDataForMessage: IUser[] = [
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+  {
+    name: "James",
+    isOnline: true,
+    messages: [
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+      {
+        message:
+          "Vestibulum viverra lacus, congue scelerisque neque. Viverra cursus nisi, in purus dolor at. Nec sed eget scelerisque imperdiet consectetur.",
+        time: "12:37",
+        send: true,
+        receive: false,
+      },
+      {
+        message:
+          "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisi nibh eu.",
+        time: "10:45",
+        send: false,
+        receive: true,
+      },
+    ],
+  },
+];
+
+export const sampleClients: IClientForCoach[] = [
+  {
+    id: "1",
+    name: "John",
+    email: "john@example.com",
+    assignedPlan: "Diet Plan",
+    adherence: "70%",
+    lastActivityDate: "12-02-2025",
+    lastActivityCheckIn: "12-02-2025",
+    pendingCheckIn: "12-02-2025",
+  },
+  {
+    id: "2",
+    name: "Alan",
+    email: "alan@example.com",
+    assignedPlan: "Workout Plan",
+    adherence: "10%",
+    lastActivityDate: "12-02-2025",
+    lastActivityCheckIn: "12-02-2025",
+    pendingCheckIn: "12-02-2025",
+  },
+  {
+    id: "3",
+    name: "James",
+    email: "james@example.com",
+    assignedPlan: "Diet Plan",
+    adherence: "90%",
+    lastActivityDate: "12-02-2025",
+    lastActivityCheckIn: "12-02-2025",
+    pendingCheckIn: "12-02-2025",
+  },
+  {
+    id: "4",
+    name: "Alice",
+    email: "alice@example.com",
+    assignedPlan: ["Diet Plan", "Workout Plan"],
+    adherence: "70%",
+    lastActivityDate: "12-02-2025",
+    lastActivityCheckIn: "12-02-2025",
+    pendingCheckIn: "12-02-2025",
+  },
+  {
+    id: "5",
+    name: "John Doe",
+    email: "john@example.com",
+    assignedPlan: ["Diet Plan", "Workout Plan"],
+    adherence: "70%",
+    lastActivityDate: "12-02-2025",
+    lastActivityCheckIn: "12-02-2025",
+    pendingCheckIn: "12-02-2025",
+  },
+  {
+    id: "6",
+    name: "John Doe",
+    email: "john@example.com",
+    assignedPlan: ["Diet Plan", "Workout Plan"],
+    adherence: "70%",
+    lastActivityDate: "12-02-2025",
+    lastActivityCheckIn: "12-02-2025",
+    pendingCheckIn: "12-02-2025",
   },
 ];

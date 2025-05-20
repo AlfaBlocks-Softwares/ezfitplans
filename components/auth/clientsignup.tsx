@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import { ClientSignupFormSchema, clientSignupSchema } from "@/validations";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import ErrorLabel from "@/design-system/errorlabel";
+import { ErrorLabel } from "@/design-system";
 import { omit } from "lodash";
 interface IPasswordType {
   password: "password" | "text";
@@ -47,7 +47,7 @@ const ClientSignup = () => {
   return (
     <OnboardingCard>
       <form
-        className="w-full h-full flex flex-col justify-center items-center gap-6 [@media(max-height:800px)]:gap-2"
+        className="w-full h-full flex flex-col justify-start items-center gap-[30px] pt-10"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col justify-center items-center gap-[8px]">
@@ -72,7 +72,7 @@ const ClientSignup = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col w-[450px] gap-4">
+        <div className="flex flex-col w-[450px] gap-[24px]">
           <div className="flex flex-col justify-start items-start gap-[2px]">
             <p className="font-poppins font-[400]  text-primary text-[14px]">
               Name
@@ -164,7 +164,7 @@ const ClientSignup = () => {
           </div>
         </Button>
 
-        <div className="w-full flex flex-col justify-center items-center [@media(max-height:800px)]:gap-4 gap-12">
+        <div className="w-full flex flex-col justify-center items-center gap-[30px] pb-10">
           <div className="w-[400px] flex justify-center items-center">
             <p className="w-full border-1 border-muted"></p>
             <p className="w-full text-[14px] font-[400] font-poppins text-center text-primary">

@@ -3,12 +3,16 @@ import React, { useState } from "react";
 
 interface CheckboxProps {
   label?: string;
+  labelClassName?: string;
   className?: string;
+  showBorder?: boolean;
 }
 
 export const Checkbox: React.FC<CheckboxProps> = ({
   label = "Remeber my choice",
+  labelClassName = "",
   className = "",
+  showBorder = false,
 }) => {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -39,7 +43,11 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         `}
         style={{
           backgroundColor: isChecked ? "var(--secondary-bg)" : "transparent",
-          border: isChecked ? "none" : "2px solid var(--primary-bg)",
+          border: showBorder
+            ? "2px solid var(--secondary-bg)"
+            : isChecked
+            ? "none"
+            : "2px solid var(--primary-bg)",
         }}
       >
         {isChecked && (
@@ -61,7 +69,9 @@ export const Checkbox: React.FC<CheckboxProps> = ({
           </svg>
         )}
       </span>
-      <span className="select-none text-primary text-[14px] font-poppins font-[400]">
+      <span
+        className={`select-none text-primary text-[14px] font-poppins font-[400] ${labelClassName}`}
+      >
         {label}
       </span>
     </label>

@@ -12,19 +12,19 @@ export default function SuccessStores() {
           From Sweat to Success: Real Stories, Real Transformations!
         </p>
       </div>
-      <div className="w-full flex justify-center items-center gap-[24px]">
-        <div className="">
-          <Image src={success2} alt="success" className="h-[450px]"></Image>
-          <div>
-            <p>Before</p>
-            <p>After</p>
+      <div className="w-full flex justify-center items-center gap-[24px] flex-wrap lg:flex-nowrap">
+        <div className="flex flex-col gap-2">
+          <Image src={success2} alt="success" className="max-h-[450px]"></Image>
+          <div className="w-full flex justify-evenly items-center gap-16 sm:gap-32">
+            <p className="font-poppins text-sm font-[400]">Before</p>
+            <p className="font-poppins text-sm font-[400]">After</p>
           </div>
         </div>
-        <div className="">
-          <Image src={success1} alt="success" className="h-[450px]"></Image>
-          <div>
-            <p>Before</p>
-            <p>After</p>
+        <div className="flex flex-col gap-2">
+          <Image src={success1} alt="success" className="max-h-[450px]"></Image>
+          <div className="w-full flex justify-evenly items-center gap-16 sm:gap-32">
+            <p className="font-poppins text-sm font-[400]">Before</p>
+            <p className="font-poppins text-sm font-[400]">After</p>
           </div>
         </div>
       </div>

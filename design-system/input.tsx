@@ -13,6 +13,7 @@ const inputVariants = cva(
           "max-w-[250px] h-[45px] rounded-[12px] border-1 border-muted px-3 py-2 font-poppins text-xs text-muted",
         password:
           "h-[45px] rounded-[12px] border-2 border-primary px-3 py-2 relative",
+        secondary: "h-[55px] rounded-[4px] border-1 border-muted px-3 py-2",
       },
     },
     defaultVariants: {

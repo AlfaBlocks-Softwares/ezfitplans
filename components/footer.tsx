@@ -68,7 +68,7 @@ export default function Footer() {
           <p className="text-4xl text-start text-smoky font-noto-serif font-bold">
             {TITLE}
           </p>
-          <p className="text-sm text-smoky break-words text-start">
+          <p className="break-words text-start font-poppins text-sm font-[400]">
             {SUB_TITLE}
           </p>
           <div className="w-full flex justify-start items-start gap-[12px]">

@@ -3,7 +3,7 @@ import { Button } from "@/design-system";
 export default function Contact() {
   return (
     <main
-      className="w-full h-[470px] flex flex-col justify-center items-center gap-[24px] my-[12px]"
+      className="w-full h-[470px] flex flex-col justify-center items-center gap-[24px] my-[12px] p-2"
       style={{
         background: "url('contact-ez.jpg')",
         backgroundRepeat: "no-repeat",
@@ -19,8 +19,8 @@ export default function Contact() {
         Personalized Programs, and a Supportive Community. Your Fitness Journey
         Starts Now!
       </p>
-      <div className="w-[520px] flex flex-col justify-center items-center gap-[12px]">
-        <div className="w-full flex gap-[12px]">
+      <div className="max-w-[520px] flex flex-col justify-center items-center gap-[12px]">
+        <div className="w-full flex gap-[12px] flex-wrap sm:flex-nowrap items-center justify-center">
           <input
             type="email"
             placeholder="Enter Email"
@@ -28,7 +28,7 @@ export default function Contact() {
           />
           <Button>Join Now</Button>
         </div>
-        <p className="text-muted font-[400] text-xs">
+        <p className="text-muted font-[400] text-xs text-center">
           By clicking Sign Up you're confirming that you agree with our Terms
           and Conditions.
         </p>

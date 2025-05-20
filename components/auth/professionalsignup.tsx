@@ -12,7 +12,7 @@ import {
 } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import ErrorLabel from "@/design-system/errorlabel";
+import { ErrorLabel } from "@/design-system";
 
 const ProfessionalSignup = () => {
   const {
@@ -30,7 +30,7 @@ const ProfessionalSignup = () => {
   return (
     <OnboardingCard>
       <form
-        className="w-full h-full flex flex-col justify-center items-center gap-12 [@media(max-height:800px)]:gap-6"
+        className="w-full h-full flex flex-col justify-start items-center gap-12 pt-12"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col justify-center items-center gap-[8px]">
@@ -59,7 +59,7 @@ const ProfessionalSignup = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-[24px] w-[450px]">
+        <div className="flex flex-col gap-6 w-[450px]">
           <div className="flex flex-col justify-start items-start gap-[8px]">
             <p className="font-poppins font-[400]  text-primary text-[14px]">
               Certificates
@@ -105,7 +105,7 @@ const ProfessionalSignup = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-start items-start gap-[8px]">
+          <div className="flex flex-col justify-start items-start gap-1">
             <p className="font-poppins font-[400] text-primary text-[14px]">
               Bio
             </p>
@@ -133,7 +133,7 @@ const ProfessionalSignup = () => {
           </div>
         </Button>
 
-        <div className="w-full flex flex-col justify-center items-center gap-[48px]">
+        <div className="w-full flex flex-col justify-center items-center gap-[48px] ">
           <div className="w-[400px] flex justify-center items-center">
             <p className="w-full border-1 border-muted"></p>
             <p className="w-full text-[14px] font-[400] font-poppins text-center text-primary">

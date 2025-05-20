@@ -4,6 +4,10 @@ export { default as apple } from "./images/apple.svg";
 export { default as arrowupright } from "./images/arrow-up-right.svg";
 export { default as arrowuprightwhite } from "./images/arrow-up-right-white.svg";
 
+export { default as edit } from "./images/edit.svg";
+export { default as message } from "./images/message.svg";
+export { default as deleteicon } from "./images/delete.svg";
+
 export { default as HeroGradientCcolor } from "./images/hero.svg";
 export { default as HeroMainPic } from "./images/heromain.svg";
 export { default as Herobg } from "./images/herobg.svg";
@@ -33,3 +37,15 @@ export { default as search } from "./images/search.svg";
 export { default as notifications } from "./images/notifications.svg";
 export { default as settings } from "./images/settings.svg";
 export { default as profile } from "./images/profile.svg";
+
+//assets used in communities
+export { default as communityprofile } from "./images/communityprofile.svg";
+export { default as like } from "./images/thumbs-up.svg";
+export { default as topIcon } from "./images/award.svg";
+
+export { default as attachment } from "./images/attachment.svg";
+export { default as microphone } from "./images/mic.svg";
+export { default as smile } from "./images/smile.svg";
+export { default as video } from "./images/video.svg";
+export { default as phone } from "./images/phone.svg";
+export { default as calendaricon } from "./images/calender.svg";

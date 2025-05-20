@@ -10,7 +10,7 @@ import { Input as AntdInput, Form } from "antd";
 const ClientSignupVerification = () => {
   return (
     <OnboardingCard>
-      <form className="w-full h-full flex flex-col justify-center items-center [@media(max-height:800px)]:gap-8 gap-16">
+      <form className="w-full h-full flex flex-col justify-center items-center pt-10 gap-10">
         <div className="flex flex-col justify-center items-center gap-[8px]">
           <p className="font-noto-serif font-bold text-4xl text-primary text-center">
             Your Wellness, Your Way
@@ -42,13 +42,21 @@ const ClientSignupVerification = () => {
               rules={[{ required: true, message: "Please enter the OTP" }]}
               className="w-full flex justify-center items-center"
             >
-              <AntdInput.OTP length={4} aria-placeholder="1" />
+              <AntdInput.OTP
+                length={4}
+                aria-placeholder="1"
+                className="!flex !w-[65px] !h-[45px]"
+              />
             </Form.Item>
           </div>
           <div className="w-full flex justify-between items-center">
-            <p className="font-poppins font-[400] text-[14px] text-secondary">
+            <Button
+              className="font-poppins font-[400] text-[14px] text-secondary cursor-pointer"
+              variant={"text"}
+              type="button"
+            >
               Resend OTP
-            </p>
+            </Button>
             <p className="font-poppins font-[400] text-[14px] text-primary">
               Resend in 10 sec
             </p>
@@ -75,7 +83,7 @@ const ClientSignupVerification = () => {
             <p className="w-full border-1 border-muted"></p>
           </div>
 
-          <div className="w-full flex justify-center items-center gap-[28px]">
+          <div className="w-full flex justify-center items-center gap-[28px] pb-20">
             <div className="w-[60px] h-[60px] rounded-[50%] bg-primary-bg flex justify-center items-center">
               <Image src={google} alt="google" className="w-[48px] h-[48px]" />
             </div>
