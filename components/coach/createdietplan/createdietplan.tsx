@@ -4,13 +4,14 @@ import DailyTarget from "./dailytarget";
 import CustomizedCalendar from "./assignedplans";
 import ProgressTracking from "./progress";
 import WorkoutDietCalendar from "./calender";
+import DietPlanBuilder from "./dietplanbuilder";
 
 const CreateDietPlanForm = () => {
   return (
     <form className="w-full">
       <Initials />
       <DailyTarget />
-      {/* <CustomizedCalendar /> */}
+      <DietPlanBuilder />
       <WorkoutDietCalendar />
       <ProgressTracking />
     </form>

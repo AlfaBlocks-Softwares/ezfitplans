@@ -1,5 +1,6 @@
 import { Herobg, HeroMainPic, search } from "@/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -34,13 +35,17 @@ export default function Hero() {
               to make a change?
             </p>
           </div>
-          <div className="w-[300px] p-[12px] flex justify-center items-center gap-[30px] rounded-[12px] bg-secondary-bg">
-            <p className="w-[100px] text-[14px] font-bold font-poppins text-secondary bg-primary-bg h-[45px] rounded-[12px] text-center flex justify-center items-center cursor-pointer">
-              Join now
-            </p>
-            <p className="w-[150px] text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer">
-              Sign Up as a coach
-            </p>
+          <div className="w-[300px] p-[12px] flex justify-center items-center gap-[30px] rounded-[12px] bg-secondary-bg z-[9999]">
+            <Link href="/clientsignup" className="cursor-pointer">
+              <p className="w-[100px] text-[14px] font-bold font-poppins text-secondary bg-primary-bg h-[45px] rounded-[12px] text-center flex justify-center items-center cursor-pointer">
+                Join now
+              </p>
+            </Link>
+            <Link href="/professionalsignup" className="cursor-pointer">
+              <p className="w-[150px] text-[14px] font-bold font-poppins text-primary bg-secondary-bg cursor-pointer">
+                Sign Up as a coach
+              </p>
+            </Link>
           </div>
         </div>
         <div className="w-full xl:w-1/2 h-full flex justify-center items-center">

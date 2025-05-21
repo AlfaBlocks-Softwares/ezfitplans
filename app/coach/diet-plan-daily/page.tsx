@@ -1,4 +1,4 @@
-import DietPlanDetails from "@/components/coach/dietplandetails/dietplandetails";
+import DietPlanDetails from "@/components/coach/dietplandetails-daily/dietplandetails";
 
 const DietPlanDetailPage = () => {
   return <DietPlanDetails />;

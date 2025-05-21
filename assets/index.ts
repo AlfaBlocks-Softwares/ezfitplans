@@ -49,3 +49,6 @@ export { default as smile } from "./images/smile.svg";
 export { default as video } from "./images/video.svg";
 export { default as phone } from "./images/phone.svg";
 export { default as calendaricon } from "./images/calender.svg";
+
+export { default as lefticon } from "./images/arrow-left.svg";
+export { default as righticon } from "./images/arrow-right.svg";

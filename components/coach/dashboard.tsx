@@ -4,6 +4,7 @@ import { Button, Input } from "@/design-system";
 import Image from "next/image";
 import React from "react";
 import CoachClientManagementTable from "./clientstable";
+import Link from "next/link";
 
 const CoachDashboardLandingPage = () => {
   return (
@@ -68,35 +69,39 @@ const CoachDashboardLandingPage = () => {
           <p className="text-start font-noto-serif font-bold text-secondary text-2xl">
             Small progress is still progress - keep going!
           </p>
-          <Button>
-            <div className="w-full flex justify-center items-center gap-[8px]">
-              <p className="font-bold font-poppoins text-[14px]">
-                Create a diet plan
-              </p>
-              <Image
-                src={arrowuprightwhite}
-                alt="arrow"
-                className="w-[24px] h-[24px]"
-              />
-            </div>
-          </Button>
+          <Link href="/coach/create-diet-plan">
+            <Button>
+              <div className="w-full flex justify-center items-center gap-[8px]">
+                <p className="font-bold font-poppoins text-[14px]">
+                  Create a diet plan
+                </p>
+                <Image
+                  src={arrowuprightwhite}
+                  alt="arrow"
+                  className="w-[24px] h-[24px]"
+                />
+              </div>
+            </Button>
+          </Link>
         </div>
         <div className="p-3 bg-primary rounded-[12px] border-1 border-muted w-full flex justify-center items-center gap-5">
           <p className="text-start font-noto-serif font-bold text-secondary text-2xl">
             You don't have to be extreme, just consistent.
           </p>
-          <Button>
-            <div className="w-full flex justify-center items-center gap-[8px]">
-              <p className="font-bold font-poppoins text-[14px]">
-                Create a workout plan
-              </p>
-              <Image
-                src={arrowuprightwhite}
-                alt="arrow"
-                className="w-[24px] h-[24px]"
-              />
-            </div>
-          </Button>
+          <Link href="/coach/create-workout-plan">
+            <Button>
+              <div className="w-full flex justify-center items-center gap-[8px]">
+                <p className="font-bold font-poppoins text-[14px]">
+                  Create a workout plan
+                </p>
+                <Image
+                  src={arrowuprightwhite}
+                  alt="arrow"
+                  className="w-[24px] h-[24px]"
+                />
+              </div>
+            </Button>
+          </Link>
         </div>
       </section>
       <section className="bg-primary rounded-[12px] border-1 border-muted p-3 w- h-full flex flex-col justify-start items-start gap-3">

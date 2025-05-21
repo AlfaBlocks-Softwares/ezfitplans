@@ -15,3 +15,28 @@ export const ClientCommunityPostValidations = z.object({
 export type ClientCommunityPostValidationsType = z.infer<
   typeof ClientCommunityPostValidations
 >;
+
+export const foodItemSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  amount: z.string(),
+  calories: z.number().min(0),
+  protein: z.number().min(0),
+  fats: z.number().min(0),
+  carbs: z.number().min(0),
+});
+
+export const mealSchema = z.object({
+  type: z.enum(["breakfast", "lunch", "snack", "dinner"]),
+  foods: z.array(foodItemSchema),
+});
+
+export const dayPlanSchema = z.object({
+  id: z.string(),
+  meals: z.record(
+    z.enum(["breakfast", "lunch", "snack", "dinner"]),
+    mealSchema
+  ),
+});
+
+export const dietPlanSchema = z.array(dayPlanSchema);

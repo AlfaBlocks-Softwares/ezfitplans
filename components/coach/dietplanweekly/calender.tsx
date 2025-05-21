@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 // Event types
-type EventType = "Diet Plan" | "Workout Plan" | "Meal Plan";
+type EventType = "Diet Plan";
 
 interface CalendarEvent {
   date: string;
@@ -29,34 +29,10 @@ const events: CalendarEvent[] = [
     color: "#FFA500", // Orange
   },
   {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-09`,
-    type: "Workout Plan",
-    title: "Workout Plan",
-    color: "#4CAF50", // Green
-  },
-  {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-10`,
-    type: "Meal Plan",
-    title: "Meal Plan",
-    color: "#2196F3", // Blue
-  },
-  {
     date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-11`,
     type: "Diet Plan",
     title: "Diet Plan",
     color: "#FFA500",
-  },
-  {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-12`,
-    type: "Workout Plan",
-    title: "Workout Plan",
-    color: "#4CAF50",
-  },
-  {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-13`,
-    type: "Meal Plan",
-    title: "Meal Plan",
-    color: "#2196F3",
   },
   {
     date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-15`,
@@ -65,38 +41,14 @@ const events: CalendarEvent[] = [
     color: "#FFA500",
   },
   {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-18`,
-    type: "Workout Plan",
-    title: "Workout Plan",
-    color: "#4CAF50",
-  },
-  {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-20`,
-    type: "Meal Plan",
-    title: "Meal Plan",
-    color: "#2196F3",
-  },
-  {
     date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-22`,
     type: "Diet Plan",
     title: "Diet Plan",
     color: "#FFA500",
   },
-  {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-25`,
-    type: "Workout Plan",
-    title: "Workout Plan",
-    color: "#4CAF50",
-  },
-  {
-    date: `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-28`,
-    type: "Meal Plan",
-    title: "Meal Plan",
-    color: "#2196F3",
-  },
 ];
 
-export default function WorkoutDietCalendar() {
+export default function DietPlanWeeklyCalendar() {
   const calendarRef = useRef<FullCalendar>(null);
   const [currentTitle, setCurrentTitle] = useState<string>("");
 
@@ -125,9 +77,6 @@ export default function WorkoutDietCalendar() {
 
   return (
     <div className="rounded-xl border-1 border-muted my-[12px] w-full bg-primary p-[12px] flex flex-col justify-start items-center gap-[12px]">
-      <p className="text-2xl font-bold font-noto-serif text-black self-start">
-        Assigned Plans
-      </p>
       <div className="custom-calendar max-w-[1100px] w-full">
         {renderCustomHeader()}
         <FullCalendar

@@ -32,11 +32,6 @@ const ClientProfile = () => {
           <ClientProfileForm />
         </div>
       </section>
-      <section className="my-3 w-full h-full flex flex-col justify-start items-start gap-3">
-        <p className="font-noto-serif font-bold text-2xl text-black">
-          Weight History
-        </p>
-      </section>
     </>
   );
 };
