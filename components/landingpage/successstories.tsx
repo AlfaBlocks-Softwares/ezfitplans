@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function SuccessStores() {
   return (
-    <main className="w-full flex flex-col justify-center items-center gap-[24px] mt-[12px] mb-[30px]">
+    <main
+      className="w-full flex flex-col justify-center items-center gap-[24px] mt-[12px] mb-[30px]"
+      id="success"
+    >
       <div className="flex flex-col justify-center items-center gap-[12px]">
         <p className="text-smoky text-center text-wrap font-bold font-noto-serif text-4xl">
           Sucess Stories

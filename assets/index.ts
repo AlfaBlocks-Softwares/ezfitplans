@@ -52,3 +52,7 @@ export { default as calendaricon } from "./images/calender.svg";
 
 export { default as lefticon } from "./images/arrow-left.svg";
 export { default as righticon } from "./images/arrow-right.svg";
+
+export { default as quote } from "./images/quote-up.svg";
+
+export { default as arrowdown } from "./images/arrow-down.svg";

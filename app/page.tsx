@@ -5,6 +5,7 @@ import Contact from "@/components/landingpage/contact";
 import Hero from "@/components/landingpage/hero";
 import NavBar from "@/components/landingpage/navbar";
 import SuccessStores from "@/components/landingpage/successstories";
+import TestimonialsSection from "@/components/landingpage/testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Brands />
       <WhyChooseUs />
+      <TestimonialsSection />
       <SuccessStores />
       <Contact />
       <Footer />

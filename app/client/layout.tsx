@@ -1,4 +1,4 @@
-import DashboardNavBar from "@/components/dashboardnavbar";
+import ClientNavBar from "@/components/clientnav";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function ClientDashboardLayout({
 }>) {
   return (
     <main className={`bg-dashboard-bg py-[12px] px-[40px]`}>
-      <DashboardNavBar />
+      <ClientNavBar />
       {children}
     </main>
   );

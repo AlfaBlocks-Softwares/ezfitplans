@@ -1,7 +1,7 @@
 import { logo, notifications, profile, search, settings } from "@/assets";
-import { CoachDashboardNavItems } from "@/constants";
+// import { CoachDashboardNavItems } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 const TITLE = "EZ Fit Plans";
 
@@ -14,7 +14,7 @@ const DashboardNavBar = () => {
           {TITLE}
         </p>
       </div>
-      <ul className="flex justify-start items-center gap-[30px]">
+      {/* <ul className="flex justify-start items-center gap-[30px]">
         {CoachDashboardNavItems?.map((itm) => (
           <Link href={itm?.path ?? ""} key={itm?.title}>
             <li className="font-noto-serif font-bold text-lg text-black">
@@ -22,7 +22,7 @@ const DashboardNavBar = () => {
             </li>
           </Link>
         ))}
-      </ul>
+      </ul> */}
       <div className="flex justify-center items-center gap-[16px]">
         <Image
           src={notifications}

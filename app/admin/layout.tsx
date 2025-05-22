@@ -1,5 +1,5 @@
 "use client";
-import DashboardNavBar from "@/components/dashboardnavbar";
+import DashboardNavBar from "@/components/adminnavbar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

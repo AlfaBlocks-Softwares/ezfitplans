@@ -1,14 +1,14 @@
 export const navItems = [
   {
     title: "Why choose use",
-    path: "#",
+    path: "#choose",
   },
   {
     title: "Testimonials",
-    path: "#",
+    path: "#testimonials",
   },
   {
     title: "Success Stories",
-    path: "#",
+    path: "#success",
   },
 ];
